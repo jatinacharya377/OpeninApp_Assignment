@@ -22,8 +22,6 @@ import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-
 
 class FragmentLinks : FragmentBase<FragmentLinksBinding>(FragmentLinksBinding::inflate),
     LinkListAdapter.LinkListener,
@@ -51,10 +49,7 @@ class FragmentLinks : FragmentBase<FragmentLinksBinding>(FragmentLinksBinding::i
         dashboardVM.dashboardDetails.observe(viewLifecycleOwner) { uiData ->
             when (uiData) {
                 is UiData.Error -> binding.layoutShimmerDashboard.stopShimmer()
-                is UiData.Loading -> {
-                    binding.layoutShimmerDashboard.startShimmer()
-                    dashboardVM.clearErrorCallback()
-                }
+                is UiData.Loading -> binding.layoutShimmerDashboard.startShimmer()
                 is UiData.Success -> {
                     uiData.data.let { data ->
                         binding.layoutDetails.visibility = View.VISIBLE

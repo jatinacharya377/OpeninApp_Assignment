@@ -26,6 +26,7 @@ class DashboardViewModel(application: Application) : ViewModelBase(application) 
 
     private fun fetchDashboardDetails() {
         launchCoroutineScope {
+            clearErrorCallback()
             _dashboardDetails.postValue(UiData.Loading())
             val response = repository.fetchDashboardDetails()
             if (response.isSuccessful) {
