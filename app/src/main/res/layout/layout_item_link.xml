@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="link"
+            type="com.assignment.openinapp.data.model.Link" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/offset_16"
+        android:layout_marginTop="@dimen/offset_20"
+        app:cardBackgroundColor="@color/white"
+        app:strokeWidth="@dimen/length_0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_link_icon"
+                android:layout_width="@dimen/length_48"
+                android:layout_height="@dimen/length_48"
+                android:layout_marginStart="@dimen/offset_12"
+                android:layout_marginTop="@dimen/offset_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:imgUrl="@{link.original_image}"
+                app:shapeAppearanceOverlay="@style/BorderedImageView"
+                tools:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/tv_link_title"
+                android:layout_width="@dimen/length_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/offset_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/figtree_regular"
+                android:maxLines="1"
+                android:text="@{link.title}"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@id/tv_link_date"
+                app:layout_constraintEnd_toStartOf="@id/tv_clicks_count"
+                app:layout_constraintStart_toEndOf="@id/iv_link_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_link_icon"
+                tools:text="Sample Link Name" />
+
+            <TextView
+                android:id="@+id/tv_link_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/offset_12"
+                android:fontFamily="@font/figtree_regular"
+                android:textColor="@color/spanish_gray"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintBottom_toBottomOf="@id/iv_link_icon"
+                app:layout_constraintStart_toEndOf="@id/iv_link_icon"
+                app:layout_constraintTop_toBottomOf="@id/tv_link_title"
+                app:date="@{link.created_at}"
+                tools:text="22 Aug 2022" />
+
+            <TextView
+                android:id="@+id/tv_clicks_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/offset_12"
+                android:fontFamily="@font/figtree_regular"
+                android:text="@{link.total_clicks.toString()}"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_link_title"
+                app:layout_constraintTop_toTopOf="@id/tv_link_title"
+                tools:text="2323" />
+
+            <TextView
+                android:id="@+id/tv_title_clicks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/offset_12"
+                android:fontFamily="@font/figtree_regular"
+                android:text="@string/clicks"
+                android:textColor="@color/spanish_gray"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_link_date"
+                app:layout_constraintTop_toTopOf="@id/tv_link_date" />
+
+            <TextView
+                android:id="@+id/tv_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/offset_16"
+                android:background="@drawable/bg_text_dotted_line"
+                android:ellipsize="end"
+                android:fontFamily="@font/figtree_regular"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/offset_12"
+                android:paddingVertical="@dimen/offset_8"
+                android:text="@{link.web_link}"
+                android:textColor="@color/brandeis_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_link_icon"
+                app:drawableEndCompat="@drawable/ic_copy_link"
+                tools:text="https://samplelink.oia.bio/ashd..." />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

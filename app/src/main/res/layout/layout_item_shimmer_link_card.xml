@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/offset_16"
+    android:layout_marginTop="@dimen/offset_20"
+    app:cardBackgroundColor="@color/white"
+    app:strokeWidth="@dimen/length_0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_link_icon_shimmer"
+            android:layout_width="@dimen/length_48"
+            android:layout_height="@dimen/length_48"
+            android:layout_marginStart="@dimen/offset_12"
+            android:layout_marginTop="@dimen/offset_12"
+            android:background="@color/spanish_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/BorderedImageView" />
+
+        <TextView
+            android:id="@+id/tv_link_title_shimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset_12"
+            android:background="@drawable/bg_text_placeholder"
+            android:fontFamily="@font/figtree_regular"
+            android:text="Sample Link Name"
+            android:textColor="@color/spanish_gray"
+            app:layout_constraintBottom_toTopOf="@id/tv_link_date_shimmer"
+            app:layout_constraintStart_toEndOf="@id/iv_link_icon_shimmer"
+            app:layout_constraintTop_toTopOf="@id/iv_link_icon_shimmer" />
+
+        <TextView
+            android:id="@+id/tv_link_date_shimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset_12"
+            android:background="@drawable/bg_text_placeholder"
+            android:fontFamily="@font/figtree_regular"
+            android:text="22 Aug 2022"
+            android:textColor="@color/spanish_gray"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintBottom_toBottomOf="@id/iv_link_icon_shimmer"
+            app:layout_constraintStart_toEndOf="@id/iv_link_icon_shimmer"
+            app:layout_constraintTop_toBottomOf="@id/tv_link_title_shimmer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/offset_12"
+            android:background="@drawable/bg_text_placeholder"
+            android:fontFamily="@font/figtree_regular"
+            android:text="2323"
+            android:textColor="@color/spanish_gray"
+            app:layout_constraintBottom_toBottomOf="@id/tv_link_title_shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_link_title_shimmer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/offset_12"
+            android:background="@drawable/bg_text_placeholder"
+            android:fontFamily="@font/figtree_regular"
+            android:text="@string/clicks"
+            android:textColor="@color/spanish_gray"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintBottom_toBottomOf="@id/tv_link_date_shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_link_date_shimmer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/offset_12"
+            android:layout_marginVertical="@dimen/offset_16"
+            android:background="@drawable/bg_text_placeholder"
+            android:ellipsize="end"
+            android:fontFamily="@font/figtree_regular"
+            android:maxLines="1"
+            android:text="https://samplelink.oia.bio/ashd..."
+            android:textColor="@color/spanish_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_link_icon_shimmer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

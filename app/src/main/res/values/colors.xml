@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="spanish_gray">#999CA0</color>
+    <color name="brandeis_blue">#0E6FFF</color>
+    <color name="usaf_blue">#003686</color>
+    <color name="black_12">#1FFFFFFF</color>
+    <color name="cultured">#F5F5F5</color>
+    <color name="light_silver">#D8D8D8</color>
+    <color name="ufo_green_12">#1F4AD15F</color>
+    <color name="ufo_green_32">#524AD15F</color>
+    <color name="alice_blue">#E8F1FF</color>
+    <color name="brandeis_blue_32">#520E6FFF</color>
+    <color name="anti_flash_white">#F2F2F2</color>
+    <color name="white_8">#14000000</color>
+    <color name="baby_blue_eyes">#A6C7FF</color>
+</resources>

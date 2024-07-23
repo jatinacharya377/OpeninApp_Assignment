@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cultured">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/offset_16"
+        android:layout_marginTop="@dimen/offset_32"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/length_48"
+        app:contentPadding="@dimen/offset_6"
+        app:strokeColor="@color/light_silver"
+        app:strokeWidth="@dimen/length_1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/offset_16"
+        android:fontFamily="@font/figtree_regular"
+        android:text="@string/all_links"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="@id/cv_back"
+        app:layout_constraintStart_toEndOf="@id/cv_back"
+        app:layout_constraintTop_toTopOf="@id/cv_back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_links"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/length_0"
+        android:layout_marginTop="@dimen/offset_8"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/offset_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_back"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        tools:listitem="@layout/layout_item_link" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OpeninAppAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">@color/usaf_blue</item>
+    </style>
+
+    <style name="Theme.OpeninAppAssignment" parent="Base.Theme.OpeninAppAssignment" />
+
+    <style name="BottomNavigationViewTextThemeActive">
+        <item name="android:fontFamily">@font/figtree_regular</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="BottomNavigationViewTextThemeInActive">
+        <item name="android:fontFamily">@font/figtree_regular</item>
+        <item name="android:textColor">@color/spanish_gray</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+
+    <style name="BottomNavigationViewIndicatorTheme" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="BorderedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+        <item name="strokeColor">@color/cultured</item>
+        <item name="strokeWidth">@dimen/length_1</item>
+    </style>
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
